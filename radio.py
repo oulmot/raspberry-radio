@@ -4,6 +4,8 @@
 # Mar 20, 2015
 # International Happiness Day
 
+# run update_bbc_urls.py first to update playlist URLs
+
 import subprocess as s
 import sys
 
