@@ -13,9 +13,9 @@ def usage():
 def getURL(station):
         urls='/var/local/bbc_radio/urls'
         lines = open(urls).readlines()
-        lines = [i.split(', ') for i in lines]
-        a = [i[0] for i in lines]
-        b = [i[1] for i in lines]
+        lines = [i.split(',') for i in lines]
+        a = [i[0].strip() for i in lines]
+        b = [i[1].strip() for i in lines]
         d = dict(zip(a,b))
         try:
                 return d[station]
@@ -34,9 +34,9 @@ def main():
         url = getURL(station.upper())
 
         if url:
-                s.Popen(["mpc", "clear"])
-                s.Popen(["mpc", "add", url.strip()])
-                s.Popen(["mpc", "play"])
+                s.Popen(["mpc", "-q", "clear"])
+                s.Popen(["mpc", "-q", "add", url.strip()])
+                s.Popen(["mpc", "-q", "play"])
 
 
 if __name__ == '__main__':
