@@ -34,6 +34,7 @@ def main():
         url = getURL(station.upper())
 
         if url:
+                # sudo apt-get install mpc, mpd
                 s.Popen(["mpc", "-q", "clear"])
                 s.Popen(["mpc", "-q", "add", url.strip()])
                 s.Popen(["mpc", "-q", "play"])
