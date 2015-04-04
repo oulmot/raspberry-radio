@@ -4,3 +4,5 @@ Tom Luo
 tom.luo@cs.oxfordalumni.org
 Calgary, AB
 Canada
+
+save CBC.m3u to /var/lib/mpd/playlists
